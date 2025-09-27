@@ -28,7 +28,7 @@ function Homeredirect() {
 }
 
 function App() {
-  const [count, setCount] = useState(0);
+  
   const { user, isLoggedin } = useContext(AuthContext);
 
   console.log("is logged in", isLoggedin);

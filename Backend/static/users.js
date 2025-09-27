@@ -16,5 +16,5 @@ const validusers =
         "password": "$2b$10$quA790LH0Xbl7gvrIuVrJO7D6cMMnmw/PdtQsq3eCMODWcpKwkRqy"
     }
 ]
-//pass word is anish123
-export default validusers;
+//pass = anish123
+module.exports =  validusers;

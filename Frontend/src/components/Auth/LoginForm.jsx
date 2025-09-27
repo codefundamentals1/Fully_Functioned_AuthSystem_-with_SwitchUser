@@ -4,9 +4,9 @@ import { useNavigate } from 'react-router-dom';
 
 const LoginForm = () => {
   const navigate = useNavigate();
-    const {user , login } = useContext(AuthContext)
-  const [username, setUsername] = useState('');
-  const [password, setPassword] = useState('');
+    const {user , login , error , setError} = useContext(AuthContext)
+  const [username, setUsername] = useState('anish');
+  const [password, setPassword] = useState('anish123');
   const [errors, setErrors] = useState({});
   
 
@@ -87,7 +87,7 @@ const LoginForm = () => {
           >
             Login
           </button>
-
+        <p className="text-red-500 text-xs mt-1">{error}</p>
           {/* Forgot Password */}
           <div className="text-center mt-4 text-sm">
             <a href="#" className="text-blue-400 hover:text-blue-500 transition duration-200">
