@@ -12,8 +12,14 @@ import {
 import Todo from "../Todo/Todo";
 
 const Dashboard = () => {
-  const { user, logout, signedUsers, switchUsers, currentId , error, setError } =
+  const { user, logout, signedUsers, switchUsers, currentId , cid ,error, setError } =
     useContext(AuthContext);
+
+    // console.log("signendusers are in dashboard" , signedUsers[currentId] , " ", currentId);
+    // console.log(cod)
+    //  const userAuthtoken = signedUsers[currentId].authToken;
+    //  console.log("Authtoken is" , userAuthtoken)
+    
   const navigate = useNavigate();
   function handleSelectChange(e) {
     if (e.target.value === "Login") {
@@ -25,10 +31,12 @@ const Dashboard = () => {
     }
   }
   const [currSelect, setCurrSelect] = useState(currentId);
-
+console.log("In dashboard user is " , user);
   function getdata(){
-      fetch("/api", {
+      fetch("/api/dashboard", {
+     
         method: "GET",
+        headers: {token : user.authToken }
       })
       .then ((res)=>{
         if(res.ok){
