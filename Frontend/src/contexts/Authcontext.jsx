@@ -85,12 +85,7 @@ function AuthProvider({ children }) {
         authToken = data.token;
         console.log("auth tiken is ", authToken);
 
-        // let checkUser = validusers.find((user) => {
-        //   if (user.username === username && password === user.password) {
-        //     return true;
-        //   } else return false;
-        // });
-        // console.log(checkUser);
+      
         if (authToken) {
           console.log("user found in valid users");
           const nSU = [
@@ -110,7 +105,7 @@ function AuthProvider({ children }) {
         }
       })
       .catch((e) => {
-        console.error("Error:", e);
+        console.error("Error:", e)
       });
       
   }

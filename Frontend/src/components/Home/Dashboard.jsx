@@ -15,10 +15,6 @@ const Dashboard = () => {
   const { user, logout, signedUsers, switchUsers, currentId , cid ,error, setError } =
     useContext(AuthContext);
 
-    // console.log("signendusers are in dashboard" , signedUsers[currentId] , " ", currentId);
-    // console.log(cod)
-    //  const userAuthtoken = signedUsers[currentId].authToken;
-    //  console.log("Authtoken is" , userAuthtoken)
     
   const navigate = useNavigate();
   function handleSelectChange(e) {
@@ -27,11 +23,10 @@ const Dashboard = () => {
     } else {
       switchUsers(e.target.value);
       setCurrSelect(e.target.value);
-      // navigate("/dashboard");
     }
   }
   const [currSelect, setCurrSelect] = useState(currentId);
-console.log("In dashboard user is " , user);
+// console.log("In dashboard user is " , user);
   function getdata(){
       fetch("/api/dashboard", {
      

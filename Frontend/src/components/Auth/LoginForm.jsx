@@ -34,7 +34,7 @@ const LoginForm = () => {
       const MockToken = "asdfghj123"
         login(username, password, MockToken);
 
-      console.log('Form submitted successfully:', { username, password });
+      // console.log('Form submitted successfully:', { username, password });
       navigate('/dashboard' , {replace: true})
       // You can handle the form submission (API request, etc.)
     }
