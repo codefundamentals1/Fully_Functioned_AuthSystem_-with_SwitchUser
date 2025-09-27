@@ -39,7 +39,7 @@ exports.login = async(req, res) => {
       res.status(200).json(senddata)
     } else res.json({ msg: "passeword is incrrect" });
   } else {
-    res.json({ msg: "user not registerd" });
+    res.status(401).json({ msg: "user not registerd" });
   }
 
   // res.json({username: data.username})

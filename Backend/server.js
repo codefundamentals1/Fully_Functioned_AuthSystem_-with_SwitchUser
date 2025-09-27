@@ -7,6 +7,7 @@ const makeConnection = require("./dbconfig/db.config");
 app.use(express.json())
 app.get("/api", (req, res)=>{
 	console.log("req recieved");
+	console.log(req.headers['token'])
 	res.status(200).json({ msg :"Hii this is home"})
 })
 makeConnection();
